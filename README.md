@@ -34,6 +34,32 @@ Compared multiple ML algorithms:
 - KNN
 - Naive Bayes
 
+## Dataset
+
+The dataset used for this project is the Crop Recommendation Dataset from Kaggle.
+
+Dataset Link:
+
+https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset
+
+The dataset contains soil nutrient information and environmental factors required for recommending suitable crops.
+
+Input Features:
+
+- Nitrogen (N)
+- Phosphorus (P)
+- Potassium (K)
+- Temperature
+- Humidity
+- Soil pH
+- Rainfall
+
+Target Output:
+
+- Recommended Crop
+
+This dataset helps the machine learning model analyze soil and weather conditions to recommend the most suitable crop for cultivation.
+
 ## How to Run
 
 Install dependencies:
