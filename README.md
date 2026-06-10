@@ -1,4 +1,4 @@
-# AI Precision Agriculture Recommendation System
+# AI Based Crop Recommendation System
 
 A Machine Learning based smart agriculture system that recommends the most suitable crop using soil nutrients and real-time weather conditions.
 
