@@ -1,21 +1,26 @@
 # AI Based Crop Recommendation System
 
-A Machine Learning based smart agriculture system that recommends the most suitable crop using soil nutrients and real-time weather conditions.
+## Precision Agriculture AI using Machine Learning and Real-Time Weather Intelligence
+
+A smart agriculture decision-support system that recommends the most suitable crop using soil nutrients, environmental conditions, and Machine Learning models.
+
+The system combines crop prediction, real-time weather analysis, fertilizer recommendations, explainable ML insights, and agricultural analytics through an interactive Streamlit dashboard.
 
 ---
 
 ## Features
 
 - Crop Recommendation using Machine Learning
-- Real-time Weather API Integration
-- Soil Nutrient Analysis
-- Explainable ML Analysis
+- Real-Time Weather API Integration
+- Soil Nutrient Analysis (NPK and pH)
+- Explainable Machine Learning Analysis
 - Alternative Crop Suggestions
-- Fertilizer Recommendation
+- Fertilizer Recommendation System
+- Agricultural Advisor Chat Assistant
 - Model Performance Dashboard
-- Recommendation History Storage
+- Recommendation History Storage using SQLite
 - Interactive Data Visualization
-- Report Generation
+- Crop Analysis Report Generation
 
 ---
 
@@ -34,41 +39,53 @@ A Machine Learning based smart agriculture system that recommends the most suita
 
 ## Machine Learning Models
 
-Multiple Machine Learning algorithms were trained and compared:
+Multiple Machine Learning algorithms are trained and compared:
 
-- Random Forest
-- Decision Tree
+- Random Forest Classifier
+- Decision Tree Classifier
 - Support Vector Machine (SVM)
 - K-Nearest Neighbors (KNN)
-- Naive Bayes
+- Gaussian Naive Bayes
 
-The model with the highest accuracy is selected for generating crop recommendations.
+The model with the highest accuracy is selected automatically for crop prediction.
+
+Generated files:
+
+```
+crop_model.pkl
+features.pkl
+model_results.pkl
+```
 
 ---
 
 ## Dataset
 
-The dataset used for this project is the Crop Recommendation Dataset from Kaggle.
+Dataset Used:
+
+Crop Recommendation Dataset - Kaggle
 
 Dataset Link:
 
 https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset
 
-The dataset contains soil nutrient information and environmental factors required for recommending suitable crops based on agricultural conditions.
+The dataset contains agricultural records with soil nutrient values and environmental factors.
 
 ### Input Features
 
-- Nitrogen (N)
-- Phosphorus (P)
-- Potassium (K)
-- Temperature
-- Humidity
-- Soil pH
-- Rainfall
+| Feature | Description |
+|---|---|
+| N | Nitrogen content |
+| P | Phosphorus content |
+| K | Potassium content |
+| Temperature | Temperature value |
+| Humidity | Relative humidity |
+| pH | Soil acidity/basicity |
+| Rainfall | Rainfall value |
 
-### Target Output
+### Output
 
-- Recommended Crop
+Recommended Crop
 
 ---
 
@@ -76,46 +93,104 @@ The dataset contains soil nutrient information and environmental factors require
 
 ### Crop Recommendation Engine
 
-Analyzes soil nutrients and weather parameters to recommend the most suitable crop.
+Uses trained Machine Learning models to analyze soil nutrients and weather parameters to recommend suitable crops.
 
 ### Weather Intelligence
 
-Fetches real-time temperature and humidity values using OpenWeather API.
+Integrates OpenWeather API to fetch:
 
-### Explainable ML Analysis
+- Current temperature
+- Humidity
 
-Shows the influence of different parameters on crop recommendation decisions.
+### Soil Health Analysis
 
-### Nutrient Analysis
+Analyzes:
 
-Visualizes soil nutrient values to understand soil conditions.
+- Soil pH level
+- NPK nutrient balance
+- Nutrient deficiencies
+- Soil health score
 
-### Fertilizer Recommendation
+### Fertilizer Recommendation System
 
-Provides fertilizer suggestions based on nutrient deficiencies.
+Provides fertilizer suggestions based on soil nutrient requirements.
 
-### Model Performance Dashboard
+Supports:
 
-Compares different Machine Learning algorithms based on accuracy.
+- Urea
+- DAP
+- SSP
+- MOP
+
+### Agricultural Advisor Chat
+
+Interactive farming assistant that provides guidance about:
+
+- Crop information
+- Soil nutrients
+- Fertilizer management
+- Soil improvement
+
+### Analytics Dashboard
+
+Includes:
+
+- Dataset exploration
+- Feature analysis
+- Correlation visualization
+- Crop distribution analysis
+- ML model comparison
 
 ### Recommendation History
 
-Stores previous crop recommendations using SQLite database.
+Stores prediction records using SQLite database:
+
+- Date and time
+- Location
+- Soil values
+- Weather information
+- Predicted crop
+- Confidence score
+- ML model used
 
 ---
 
-## How to Run
+## Project Structure
+
+```
+AI-Based-Crop-Recommendation-System
+
+├── app.py
+├── train_model.py
+├── Crop_recommendation.csv
+
+├── crop_model.pkl
+├── features.pkl
+├── model_results.pkl
+
+├── history.db
+├── requirements.txt
+├── Procfile
+├── README.md
+
+└── .streamlit
+      └── config.toml
+```
+
+---
+
+## Installation and Setup
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/Manisha5918/AI-Precision-Agriculture-Recommendation-System.git
+git clone https://github.com/Manisha5918/AI-Based-Crop-Recommendation-System.git
 ```
 
-Move into the project folder:
+Move into the folder:
 
 ```bash
-cd AI-Precision-Agriculture-Recommendation-System
+cd AI-Based-Crop-Recommendation-System
 ```
 
 Install dependencies:
@@ -124,7 +199,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run the application:
+Run application:
 
 ```bash
 streamlit run app.py
@@ -137,15 +212,16 @@ streamlit run app.py
 - Precision Farming
 - Smart Agriculture
 - Crop Selection Assistance
-- Soil Based Decision Support
-- Agriculture Technology Solutions
+- Soil-Based Decision Support
+- Agricultural Technology Solutions
 
 ---
 
 ## Future Enhancements
 
-- Cloud Deployment
-- Mobile Application Integration
-- More Crop Dataset Expansion
-- Advanced AI Agriculture Assistant
+- IoT Sensor Integration
+- Mobile Application Development
+- Multilingual Farmer Assistant
+- Satellite-Based Soil Analysis
+- Deep Learning Based Recommendation System
 
